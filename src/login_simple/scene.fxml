@@ -5,9 +5,10 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 
-<AnchorPane prefHeight="98.0" prefWidth="198.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="login_simple.SceneController">
+<AnchorPane fx:id="scenePane" prefHeight="98.0" prefWidth="198.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="login_simple.SceneController">
    <children>
       <Label fx:id="nameLabel" layoutX="20.0" layoutY="12.0" prefHeight="17.0" prefWidth="159.0" text="Hello" />
-      <Button layoutX="34.0" layoutY="59.0" mnemonicParsing="false" text="Click for nuclear code" />
+      <Button fx:id="bomb_butt" layoutY="72.0" mnemonicParsing="false" onAction="#showCode" text="Click for nuclear code" />
+      <Button fx:id="logoutButton" layoutX="153.0" layoutY="72.0" mnemonicParsing="false" onAction="#logout" text="Logout" />
    </children>
 </AnchorPane>
