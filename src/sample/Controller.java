@@ -7,7 +7,7 @@ import javafx.scene.shape.Sphere;
 public class Controller {
 
     @FXML
-    private Sphere sphere;
+    private Sphere sphere; 
     private double x;
     private double y;
 
