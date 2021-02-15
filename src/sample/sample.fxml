@@ -6,15 +6,15 @@
 <?import javafx.scene.text.Text?>
 
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="261.0" prefWidth="322.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="261.0" prefWidth="322.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <Button layoutX="22.0" layoutY="222.0" mnemonicParsing="false" text="Button" />
-      <Button layoutX="205.0" layoutY="186.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="108.0" text="Button" />
-      <Button layoutX="22.0" layoutY="174.0" mnemonicParsing="false" text="Button" />
-      <Sphere layoutX="72.0" layoutY="91.0" radius="50" />
-      <Button layoutX="259.0" layoutY="16.0" mnemonicParsing="false" text="Button" />
-      <Button layoutX="205.0" layoutY="222.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="108.0" text="Button" />
-      <Button layoutX="85.0" layoutY="222.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="108.0" text="Button" />
+      <Button layoutX="22.0" layoutY="222.0" mnemonicParsing="false" text="Left 2" />
+      <Button layoutX="205.0" layoutY="186.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="108.0" text="Right 1" />
+      <Button fx:id="id_1" layoutX="22.0" layoutY="174.0" mnemonicParsing="false" text="Left 1" />
+      <Sphere fx:id="sphere" layoutX="72.0" layoutY="91.0" onDragDetected="#onDragSphere" onDragDone="#onDragSphere" radius="50" />
+      <Button layoutX="259.0" layoutY="16.0" mnemonicParsing="false" onAction="#exit" text="Exit" />
+      <Button layoutX="205.0" layoutY="222.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="108.0" text="Right 2" />
+      <Button layoutX="85.0" layoutY="222.0" mnemonicParsing="false" onAction="#sayHelloWorld" prefHeight="25.0" prefWidth="108.0" text="say" />
       <Text layoutX="22.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hello World" textAlignment="CENTER" wrappingWidth="99.9999994635582" />
    </children>
 </AnchorPane>

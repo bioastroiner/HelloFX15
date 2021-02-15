@@ -1,0 +1,18 @@
+.root{
+    -fx-background-color: #EEEEEE;
+}
+
+.label{
+    -fx-font-size: 10;
+    -fx-font-family: "Lucida Console";
+    -fx-text-fill: "black"
+    -fx-alignment:center;
+}
+
+#id_1{
+    -fx-font-size: 20;
+}
+
+#sphere{
+
+}
