@@ -1,21 +1,18 @@
 package login_simple;
 
 import javafx.application.Application;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Random;
 
 public class LoginApp extends Application {
-
-    public static void main(String[] args) {
-        launch(args);
-    }
 
     @Override
     public void start(Stage primaryStage) {
@@ -28,19 +25,20 @@ public class LoginApp extends Application {
             primaryStage.show();
 
             primaryStage.setOnCloseRequest(e -> logout(primaryStage));
+
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    public void logout(Stage stage){
+    public void logout(Stage stage) {
 
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Logout");
         alert.setHeaderText("Are you sure that you want to log out?!");
         alert.setContentText("you have to log in again...");
 
-        if(alert.showAndWait().get() == ButtonType.OK){
+        if (alert.showAndWait().get() == ButtonType.OK) {
             System.out.println("logged out");
         }
     }

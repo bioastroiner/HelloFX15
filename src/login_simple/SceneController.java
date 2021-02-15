@@ -6,8 +6,12 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+
+import java.util.Random;
 
 public class SceneController {
 
@@ -20,6 +24,8 @@ public class SceneController {
     private Button bomb_butt;
     @FXML
     private AnchorPane scenePane;
+    @FXML
+    private ImageView memeholder;
 
     public void displayName(String username) {
         nameLabel.setText("Hello: " + username);
@@ -47,5 +53,11 @@ public class SceneController {
         alert.setHeaderText("Failed");
         if(alert.showAndWait().get() == ButtonType.OK)
             new Alert(Alert.AlertType.WARNING,"Activating all warhead to random locations...",ButtonType.APPLY).show();
+    }
+
+    public void showMeme(ActionEvent event){
+        Image img = new Image(getClass().getResourceAsStream(String.format("meme_%s.png",new Random().nextInt(10) + 1)));
+        System.out.println();
+        memeholder.setImage(img);
     }
 }
